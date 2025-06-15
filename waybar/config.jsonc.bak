@@ -1,0 +1,60 @@
+// -*- mode: jsonc -*-
+{
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["privacy","cpu", "mpris","group/system"],
+
+  "reload-style-on-change":true,
+  "height":20,
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%A %d %B}",
+  },
+
+  "hyprland/window": {
+    "icon": true,
+    "separate-outputs": true
+  },
+
+  "keyboard-state": {
+    "capslock": true
+  },
+
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "title-len": 20,
+
+    "player-icons": {
+      "default": "▶",
+      "spotube": "🎵"
+    }
+    }
+  },
+
+  "group/system": {
+    "orientation":"inherit",
+    "drawer":{
+      "transtition-duration":500,
+      "children-class": "other-system",
+      "transition-left-to-right": false
+    },
+    "modules":[
+      "custom/power",
+      "custom/restart"
+    ]
+  },
+
+  "custom/power": {
+    "format":"⏻",
+    "tooltip":false,
+    "on-click":"shutdown now"
+  },
+
+  "custom/restart": {
+    "format":"⟲",
+    "tooltip":false,
+    "exec": "reboot"
+  }
+
+}

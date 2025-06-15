@@ -1,0 +1,45 @@
+@define-color bg #161616;
+@define-color border #393939;
+@define-color text #ffffff;
+@define-color focus #262626;
+
+.background {
+  background-color: transparent;
+}
+
+#main {
+  color: @text;
+  background-color: @bg;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#entry:focus {
+  background-color: @focus;
+  color: @text;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+#main.vertical {
+  border: solid 4px @border;
+}
+
+#match {
+  background-color: @bg;
+  border-radius: 8px;
+  color: @text;
+}
+
+#match:selected * {
+  background-color: @focus;
+}
+
+#match.horizontal {
+  padding: 4px;
+}
+
+#plugin {
+  background-color: @bg;
+}

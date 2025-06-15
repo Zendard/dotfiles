@@ -1,0 +1,35 @@
+@define-color bg #161616;
+@define-color hover #525252;
+@define-color border-color rgba(255, 255, 255, 0.15);
+@define-color text-color #dde1e6;
+@define-color notification-bg #262626;
+
+.control-center {
+  margin: 8px;
+  background-color: @bg;
+  border: solid 3px @border-color;
+}
+
+.text-button {
+  border: solid 3px @border-color;
+  background: @bg;
+  font-weight: 700;
+}
+
+.text-button#hover {
+  background: @hover;
+}
+
+.notification {
+  background-color: @notification-bg;
+  border: solid 3px @border-color;
+}
+
+.notification#hover {
+  background-color: @hover;
+}
+
+.notification-action {
+  border: none;
+  border-top: solid 3px @border-color;
+}
