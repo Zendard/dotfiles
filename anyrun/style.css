@@ -1,45 +1,66 @@
-@define-color bg #161616;
-@define-color border #393939;
-@define-color text #ffffff;
-@define-color focus #262626;
-
-.background {
-  background-color: transparent;
+window {
+  background: transparent;
 }
 
-#main {
-  color: @text;
-  background-color: @bg;
-  border-radius: 8px;
-  padding: 8px;
+box.main {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 3px solid #393939;
+  background-color: #161616;
 }
 
-#entry:focus {
-  background-color: @focus;
-  color: @text;
-  border: none;
-  outline: none;
-  box-shadow: none;
+text {
+  min-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: "JetBrains Mono Nerd Font";
+  font-weight: 700;
 }
 
-#main.vertical {
-  border: solid 4px @border;
+.matches {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
 }
 
-#match {
-  background-color: @bg;
-  border-radius: 8px;
-  color: @text;
+box.plugin:first-child {
+  margin-top: 5px;
 }
 
-#match:selected * {
-  background-color: @focus;
+box.plugin.info {
+  min-width: 200px;
 }
 
-#match.horizontal {
-  padding: 4px;
+list.plugin {
+  background-color: rgba(0, 0, 0, 0);
 }
 
-#plugin {
-  background-color: @bg;
+label.match.description {
+  font-size: 10px;
+}
+
+label.plugin.info {
+  font-size: 14px;
+  color: #dde1e6;
+  font-family: "JetBrains Mono Nerd Font";
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+.match {
+  background: transparent;
+  border-radius: 10px;
+  transition: 0.1s padding;
+  padding-left: 2px;
+  margin-bottom: 2px;
+  color: #dde1e6;
+  font-family: "JetBrains Mono Nerd Font";
+  font-weight: 700;
+}
+
+.match:selected {
+  background: #393939;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  margin-bottom: 2px;
 }
