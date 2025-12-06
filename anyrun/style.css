@@ -8,6 +8,7 @@ box.main {
   border-radius: 10px;
   border: 3px solid #393939;
   background-color: #161616;
+  height: 50px;
 }
 
 text {
@@ -15,6 +16,7 @@ text {
   padding: 5px;
   border-radius: 5px;
   font-family: "JetBrains Mono Nerd Font";
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -50,7 +52,7 @@ label.plugin.info {
 .match {
   background: transparent;
   border-radius: 10px;
-  transition: 0.1s padding;
+  /* transition: 0.1s padding; */
   padding-left: 2px;
   margin-bottom: 2px;
   color: #dde1e6;
